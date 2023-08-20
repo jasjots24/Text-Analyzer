@@ -56,7 +56,7 @@ const TextForm = (props) => {
     </div>
     <div className="container" style={{color:props.mode==='dark'?'white':'black'}}>
         <h3>YOUR TEXT SUMMARY</h3>
-        <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
         <p>{0.008 * text.split(" ").length} Estimated Time Minutes taken to read words</p>
     </div>
     </>
